@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="flex center">
+    <div class="flex column container center">
+      <div class="flex1 flex center">
+        <input id="input" type="text" placeholder="search" />
+        <button onclick="fetchGiphy()">search</button>
+        <button onclick="writeData()">write</button>
+      </div>
+      <main class="flex8"></main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyBUnKUL6nScfP1l_ZtWyBy6B-T1I1aHYFs",
+        authDomain: "mygiphy.firebaseapp.com",
+        projectId: "mygiphy",
+        storageBucket: "mygiphy.appspot.com",
+        messagingSenderId: "149366984408",
+        appId: "1:149366984408:web:cef13bed9059ca1a4791ad",
+      };
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <script src="./index.js" />
+  </body>
+</html>
